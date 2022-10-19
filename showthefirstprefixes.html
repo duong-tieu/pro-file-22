@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let numbers = Number(prompt(message:"Nhap n so nguyen to dau tien "));
+  let count = 0 ;
+  let commonDivisorNum = 0;
+  const MAX_INT_NUM = Number.MAX_SAFE_INTEGER;
+  for (let i = 1;i < MAX_INT_NUM; i++) {
+      if(count < numbers) {
+          for (let j = 1; j <= i; j++) {
+              if( i % j === 0)
+                  commonDivisorNum++;
+          }
+          if (commonDivisorNum === 2) {
+              document.write(i + "<br>");
+              count++;
+          }
+          commonDivisorNum = 0;
+      } else {
+          break;
+      }
+  }
+</script>
+</body>
+</html>
